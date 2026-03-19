@@ -11,10 +11,20 @@ body {
 }
 
 .container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
     width: 80%;
     background-color: rgb(219, 0, 0);
     margin: 0 auto;
     padding: 20px;
+}
+main{
+    flex: 3;
+}
+aside{
+    background-color: #ff00ee;
+    flex: 1;
 }
 
 header{
@@ -26,13 +36,15 @@ header{
 }
 
 nav ul {
+    display: flex;
+    justify-content: center;
     margin: 10px;
     list-style: none;
     text-align: center;
 }
 
 nav li{
-    display: inline-block;
+    /* display: inline-block; */
     margin: 0 15px
 }
 
@@ -50,10 +62,6 @@ nav a:hover {
 section, aside{
     margin-bottom: 30px;
     padding: 20px;
-}
-
-aside{
-    background-color: #ff00ee;
 }
 
 article{
@@ -74,3 +82,23 @@ footer{
     border-top: 1px solid black;
     font-size: 0.9em;
 }
+
+@media (max-width: 768px){
+
+    .container{
+        flex-direction: column;
+        width: 100%;
+        background-color: aqua;
+    }
+    aside{
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
